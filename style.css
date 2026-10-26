@@ -1,0 +1,70 @@
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Limit max-width on Hero section text for better readability */
+.hero-desc {
+  max-width: 650px;
+}
+
+/* Hover effect for service cards */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-image: linear-gradient(to bottom, white, cyan);
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Custom styling for subtle text opacity in footer */
+.text-light-50 {
+  color: rgba(255, 255, 255, 0.7);
+}
+#logob{
+color: goldenrod !important;
+}
+#services{
+color: aliceblue;
+  background-image: linear-gradient(to right, rgb(7, 7, 7),rgb(255, 0, 0),rgb(243, 123, 4),rgb(233, 222, 11));
+  
+}
+.nav-link:hover{
+    opacity: 0.7;
+}
+/* Colour tokens — override to re-skin the effect:
+   --ink    main text colour (defaults to currentColor)
+   --ink-2  primary accent   --ink-3  secondary accent */
+:root { --ink: currentColor; --ink-2: #f10de9; --ink-3: #4FF8FF; }
+
+/* 04 Neon-Haus — buzzing neon sign with unstable tube flicker */
+.fx-neon {
+  font: 600 32px/1.1 "JetBrains Mono", monospace;
+  letter-spacing: .14em;
+  color: var(--ink);
+  animation: fx-neon 3.2s linear infinite;
+}
+@keyframes fx-neon {
+  0%, 18%, 21%, 24%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 4px var(--ink),
+      0 0 11px var(--ink-2),
+      0 0 24px var(--ink-2),
+      0 0 48px var(--ink-2);
+  }
+  19%, 22%, 62% {
+    opacity: .35;
+    text-shadow: none;
+  }
+  63%, 64.5% {
+    opacity: .6;
+    text-shadow: 0 0 4px var(--ink-2);
+  }
+}
+
